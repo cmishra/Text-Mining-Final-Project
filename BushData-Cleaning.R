@@ -1,6 +1,9 @@
-setwd("../CS 6501/Course Project/")
+# setwd("../CS 6501/Course Project/")
 # setwd("../../R Working Directory/")
-setwd("Dropbox/College/3_Third Year/06_Sixth Semester/CS 6501/Course Project/")
+# setwd("Dropbox/College/3_Third Year/06_Sixth Semester/CS 6501/Course Project/")
+setwd("../ubuntu/finalProj")
+install.packages(c("stringr", "tm", "data.table", "lubridate", "parallel", "SnowballC", 
+                    "topicmodels", "slam"))
 source("BushData-CleaningMethods.R")
 
 bushDocFileNames <- paste0("data/Bush Docs/", list.files("data/Bush Docs")[
@@ -22,6 +25,7 @@ tdms <- c(tdm[[1]], tdm[[2]], tdm[[3]], tdm[[4]])
 # rm(tdm, docsList, docsDT)
 dtm <- pruneWords(tdms)
 clusterExport(cl, "dtm")
+system.time(lda.test <- LDA(dtm, 10))
 ldas <- parLapply(cl, seq(100, 400, length.out=4), function(x) LDA(dtm, x))
 save(ldas, file = "output.RData")
 stopCluster(cl)

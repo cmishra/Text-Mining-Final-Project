@@ -30,7 +30,7 @@ genTdm <- function(docs){
 }
 
 pruneWords <- function(dtm) {
-  terms.df <- colapply_simple_triplet_matrix(dtm, function(tf) sum(tf > 0))
+  terms.df <- colapply_simple_triplet_matrix(dtm, function(tf) {sum(tf > 50)})
   dtm[,terms.df > 50]
 }
 
