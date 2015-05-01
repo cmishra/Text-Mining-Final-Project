@@ -1,15 +1,12 @@
-# setwd("../CS 6501/Course Project/")
+setwd("../CS 6501/Course Project/")
 # setwd("../../R Working Directory/")
 # setwd("Dropbox/College/3_Third Year/06_Sixth Semester/CS 6501/Course Project/")
-setwd("../ubuntu/finalProj")
-install.packages(c("stringr", "tm", "data.table", "lubridate", "parallel", "SnowballC", 
-                    "topicmodels", "slam"))
 source("BushData-CleaningMethods.R")
 
 bushDocFileNames <- paste0("data/Bush Docs/", list.files("data/Bush Docs")[
   str_detect(list.files("data/Bush Docs"),"doc-pg")])
 
-cl <- makeCluster(mc <- getOption("cl.cores", 2))
+cl <- makeCluster(mc <- getOption("cl.cores", 4))
 clusterEvalQ(cl, {source("BushData-CleaningMethods.R")})
 
 docsDT <- rbindlist(lapply(bushDocFileNames, readFile))
@@ -24,10 +21,29 @@ tdm <- parLapply(cl, docsList, genTdm)
 tdms <- c(tdm[[1]], tdm[[2]], tdm[[3]], tdm[[4]])
 # rm(tdm, docsList, docsDT)
 dtm <- pruneWords(tdms)
-clusterExport(cl, "dtm")
-system.time(lda.test <- LDA(dtm, 10))
-ldas <- parLapply(cl, seq(100, 400, length.out=4), function(x) LDA(dtm, x))
-save(ldas, file = "output.RData")
+stopCluster(cl)
+clusterExport(cl, list("dtm"))
+
+system.time(
+  ldasGibbs <- parLapply(cl, seq(200, 400, by=100), 
+    function(x) LDA(k=x, method="Gibbs", x=dtm))
+)
+
+system.time(lda.100 <- LDA(dtm, 100))
+save(lda.100, file="lda100.RData")
+# system.time(lda.200 <- LDA(dtm, 200, method="Gibbs"))
+# save(lda.200, file="lda200.RData")
+# system.time(lda.300 <- LDA(dtm, 300))
+# save(lda.300, file="lda300.RData")
+# system.time(lda.400 <- LDA(dtm, 400))
+# save(lda.400, file="lda400.RData")
+
+ldaFormat <- dtm2ldaformat(dtm)
+ldaGibbs.200 <- lda.collapsed.gibbs.sampler(ldaFormat, 200, dtm$dimnames$Terms,
+  num.iterations=5000)
+
+lda.temp <- LDA(dtm, 10)
+save(lda.temp, file = "output.RData")
 stopCluster(cl)
 
 # testSample <- genTdm(docsDT[1:1000, Content])
