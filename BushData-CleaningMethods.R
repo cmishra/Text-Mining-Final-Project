@@ -36,7 +36,21 @@ pruneWords <- function(dtm) {
 
 stpwrds <- wordStem(scan(file="stopwords.txt", what=character())); 
 
-
+write.lda <- function(dtmToWrite, title="write_lda_output") {
+  vocab <- dtmToWrite$dimnames$Terms
+  cat(file = paste0(title, "_vocab.txt"), vocab, sep="\n")
+  dtmFile <- file(paste0(title, ".dat"), "wt")
+  rowapply_simple_triplet_matrix(dtmToWrite, function(wordFreqs) {
+    docHas <- which(wordFreqs != 0)
+    cat(file=dtmFile, length(docHas), " ", sep="")
+    invisible(lapply(docHas, function(wordIndex) {
+      cat(file=dtmFile, wordIndex-1, ":", wordFreqs[wordIndex], " ", 
+        sep="")
+    }))
+    cat(file=dtmFile, "\n")
+  })
+  close(dtmFile)
+}
 
 
 # extractDate <- 
