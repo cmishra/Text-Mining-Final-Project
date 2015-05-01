@@ -1,0 +1,4 @@
+g++    -c -o utils.o utils.cc
+utils.cc:19:24: fatal error: gsl/gsl_sf.h: No such file or directory
+compilation terminated.
+make: *** [utils.o] Error 1
