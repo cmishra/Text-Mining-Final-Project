@@ -1,0 +1,520 @@
+topic 000
+   tax
+   economi
+   busi
+   econom
+   american
+   invest
+   year
+   job
+   growth
+   small
+
+
+topic 001
+   presid
+   district
+   georgia
+   todai
+   nomin
+   state
+   pennsylvania
+   louisiana
+   made
+   ohio
+
+
+topic 002
+   report
+   congress
+   act
+   state
+   unit
+   messag
+   section
+   transmit
+   hous
+   white
+
+
+topic 003
+   presid
+   state
+   unit
+   cooper
+   econom
+   develop
+   region
+   countri
+   commit
+   secur
+
+
+topic 004
+   trade
+   agreement
+   china
+   world
+   america
+   state
+   countri
+   unit
+   market
+   american
+
+
+topic 005
+   forc
+   bosnia
+   nato
+   kosovo
+   support
+   peac
+   secur
+   militari
+   unit
+   oper
+
+
+topic 006
+   work
+   job
+   govern
+   worker
+   busi
+   compani
+   program
+   employe
+   american
+   feder
+
+
+topic 007
+   laughter
+   presid
+   good
+   remark
+   peopl
+   ve
+   mayor
+   great
+   governor
+   team
+
+
+topic 008
+   terrorist
+   terror
+   nation
+   america
+   secur
+   american
+   attack
+   war
+   protect
+   intellig
+
+
+topic 009
+   presid
+   mr
+   peopl
+   ve
+   question
+   talk
+   don
+   thing
+   ll
+   lot
+
+
+topic 010
+   bill
+   congress
+   senat
+   legisl
+   hous
+   pass
+   work
+   american
+   reform
+   sign
+
+
+topic 011
+   emerg
+   nation
+   continu
+   state
+   declar
+   list
+   notic
+   feder
+   unit
+   volum
+
+
+topic 012
+   peac
+   israel
+   palestinian
+   east
+   middl
+   state
+   minist
+   prime
+   presid
+   isra
+
+
+topic 013
+   russia
+   russian
+   yeltsin
+   presid
+   putin
+   space
+   state
+   unit
+   todai
+   vladimir
+
+
+topic 014
+   state
+   unit
+   treati
+   convent
+   agreement
+   senat
+   protocol
+   ratif
+   transmit
+   parti
+
+
+topic 015
+   famili
+   peopl
+   faith
+   american
+   live
+   love
+   god
+   life
+   america
+   dai
+
+
+topic 016
+   minist
+   prime
+   peac
+   ireland
+   unit
+   peopl
+   northern
+   blair
+   world
+   state
+
+
+topic 017
+   laughter
+   presid
+   tonight
+   hous
+   white
+   hillari
+   american
+   life
+   remark
+   king
+
+
+topic 018
+   peopl
+   make
+   ve
+   america
+   good
+   countri
+   work
+   laughter
+   tax
+   job
+
+
+topic 019
+   border
+   immigr
+   state
+   law
+   illeg
+   mexico
+   enforc
+   legal
+   unit
+   countri
+
+
+topic 020
+   school
+   educ
+   children
+   student
+   work
+   child
+   year
+   teacher
+   make
+   colleg
+
+
+topic 021
+   senat
+   vote
+   court
+   judg
+   state
+   campaign
+   justic
+   american
+   law
+   decis
+
+
+topic 022
+   health
+   care
+   medicar
+   insur
+   system
+   cost
+   plan
+   year
+   pai
+   senior
+
+
+topic 023
+   crime
+   drug
+   gun
+   polic
+   law
+   children
+   commun
+   violenc
+   year
+   offic
+
+
+topic 024
+   africa
+   aid
+   african
+   nation
+   unit
+   peopl
+   south
+   state
+   hiv
+   develop
+
+
+topic 025
+   order
+   state
+   unit
+   execut
+   nation
+   sanction
+   control
+   person
+   govern
+   author
+
+
+topic 026
+   energi
+   oil
+   nation
+   make
+   work
+   protect
+   peopl
+   water
+   state
+   environment
+
+
+topic 027
+   budget
+   cut
+   fund
+   program
+   spend
+   congress
+   billion
+   year
+   increas
+   balanc
+
+
+topic 028
+   iraq
+   iraqi
+   peopl
+   war
+   terrorist
+   govern
+   afghanistan
+   al
+   troop
+   free
+
+
+topic 029
+   militari
+   forc
+   command
+   gener
+   servic
+   veteran
+   serv
+   men
+   defens
+   chief
+
+
+topic 030
+   technologi
+   commun
+   develop
+   inform
+   govern
+   research
+   nation
+   servic
+   human
+   scienc
+
+
+topic 031
+   letter
+   speaker
+   mr
+   dear
+   report
+   chairman
+   senat
+   committe
+   leader
+   sincer
+
+
+topic 032
+   north
+   korea
+   japan
+   japanes
+   korean
+   south
+   china
+   unit
+   pacif
+   asia
+
+
+topic 033
+   iraq
+   resolut
+   weapon
+   iraqi
+   saddam
+   council
+   unit
+   secur
+   hussein
+   continu
+
+
+topic 034
+   democraci
+   peopl
+   freedom
+   state
+   free
+   govern
+   unit
+   human
+   democrat
+   nation
+
+
+topic 035
+   act
+   law
+   feder
+   agenc
+   author
+   execut
+   depart
+   state
+   provis
+   section
+
+
+topic 036
+   world
+   american
+   nation
+   america
+   peopl
+   todai
+   year
+   live
+   presid
+   freedom
+
+
+topic 037
+   nuclear
+   europ
+   weapon
+   nato
+   secur
+   state
+   unit
+   world
+   peac
+   nation
+
+
+topic 038
+   secretari
+   offic
+   press
+   presid
+   depart
+   administr
+   hous
+   director
+   releas
+   white
+
+
+topic 039
+   peopl
+   year
+   thing
+   work
+   ve
+   countri
+   don
+   time
+   make
+   lot
+
+
