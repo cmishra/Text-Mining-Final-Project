@@ -52,5 +52,19 @@ write.lda <- function(dtmToWrite, title="write_lda_output") {
   close(dtmFile)
 }
 
+write.plda <- function(dtmToWrite, title="write_plda_output") {
+  vocab <- dtmToWrite$dimnames$Terms
+  dtmFile <- file(paste0(title, ".dat"), "wt")
+  rowapply_simple_triplet_matrix(dtmToWrite, function(wordFreqs) {
+    docHas <- which(wordFreqs != 0)
+    invisible(lapply(docHas, function(wordIndex) {
+      cat(file=dtmFile, vocab[wordIndex], " ", wordFreqs[wordIndex], " ", 
+        sep="")
+    }))
+    cat(file=dtmFile, "\n")
+  })
+  close(dtmFile)
+}
+
 
 # extractDate <- 
