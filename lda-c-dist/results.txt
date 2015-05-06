@@ -1,0 +1,325 @@
+topic 000
+   peopl
+   make
+   ve
+   good
+   america
+   laughter
+   countri
+   state
+   work
+   job
+
+
+topic 001
+   school
+   educ
+   children
+   work
+   program
+   student
+   child
+   year
+   commun
+   make
+
+
+topic 002
+   peopl
+   thing
+   year
+   ve
+   countri
+   don
+   work
+   time
+   make
+   lot
+
+
+topic 003
+   forc
+   militari
+   unit
+   secur
+   nato
+   support
+   bosnia
+   oper
+   mission
+   continu
+
+
+topic 004
+   energi
+   technologi
+   nation
+   oil
+   develop
+   protect
+   environment
+   environ
+   work
+   year
+
+
+topic 005
+   america
+   nation
+   peopl
+   american
+   countri
+   work
+   live
+   freedom
+   great
+   citizen
+
+
+topic 006
+   presid
+   mr
+   peopl
+   question
+   ve
+   talk
+   work
+   issu
+   ll
+   don
+
+
+topic 007
+   secretari
+   presid
+   court
+   nomin
+   feder
+   judg
+   offic
+   assist
+   state
+   todai
+
+
+topic 008
+   debt
+   year
+   pai
+   budget
+   surplu
+   financi
+   medicar
+   billion
+   relief
+   social
+
+
+topic 009
+   presid
+   laughter
+   remark
+   hous
+   todai
+   dai
+   honor
+   year
+   great
+   white
+
+
+topic 010
+   bill
+   congress
+   senat
+   hous
+   budget
+   legisl
+   american
+   pass
+   reform
+   vote
+
+
+topic 011
+   health
+   care
+   peopl
+   insur
+   medicar
+   cost
+   system
+   plan
+   medic
+   senior
+
+
+topic 012
+   iraq
+   iraqi
+   terrorist
+   peopl
+   war
+   terror
+   secur
+   nation
+   attack
+   al
+
+
+topic 013
+   world
+   nation
+   peopl
+   american
+   freedom
+   peac
+   todai
+   america
+   democraci
+   europ
+
+
+topic 014
+   act
+   law
+   feder
+   depart
+   agenc
+   govern
+   inform
+   execut
+   secretari
+   nation
+
+
+topic 015
+   drug
+   colombia
+   state
+   cuba
+   unit
+   democraci
+   countri
+   chairman
+   traffick
+   cuban
+
+
+topic 016
+   trade
+   agreement
+   econom
+   market
+   africa
+   unit
+   state
+   countri
+   world
+   china
+
+
+topic 017
+   report
+   letter
+   transmit
+   hous
+   senat
+   congress
+   speaker
+   act
+   dear
+   mr
+
+
+topic 018
+   tax
+   peopl
+   year
+   job
+   work
+   economi
+   busi
+   american
+   make
+   cut
+
+
+topic 019
+   mexico
+   border
+   immigr
+   american
+   address
+   releas
+   press
+   america
+   transcript
+   broadcast
+
+
+topic 020
+   state
+   unit
+   nuclear
+   cooper
+   treati
+   weapon
+   secur
+   intern
+   agreement
+   russia
+
+
+topic 021
+   children
+   drug
+   crime
+   nation
+   aid
+   violenc
+   todai
+   effort
+   prevent
+   year
+
+
+topic 022
+   state
+   nation
+   unit
+   emerg
+   order
+   continu
+   execut
+   sanction
+   declar
+   govern
+
+
+topic 023
+   state
+   governor
+   work
+   welfar
+   peopl
+   remark
+   florida
+   good
+   spoke
+   hous
+
+
+topic 024
+   peac
+   minist
+   prime
+   israel
+   palestinian
+   east
+   middl
+   state
+   peopl
+   process
+
+
