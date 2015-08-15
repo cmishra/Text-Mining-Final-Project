@@ -4,6 +4,8 @@ Code to that created the [Presidential Documents LDA](chetanmishra.com) (to acce
 
 ## Technical Details
 
+Technical details with equations rendered properly are available if you follow the directions above. The technical details (with equations written in LaTeX form) are available below.
+
 **Data set:** [Compiled Presidential Documents](http://www.gpo.gov/fdsys/browse/collection.action?collectionCode=CPD)
 
 **Purpose:** How can we quantitatively measure what the administration was focused on and how the focus changed over time?
