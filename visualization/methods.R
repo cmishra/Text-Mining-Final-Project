@@ -6,6 +6,11 @@ library(parallel)
 library(SnowballC)
 library(topicmodels)
 library(slam)
+library(shiny)
+library(tidyr)
+library(ggplot2)
+load("bushClinDTM.RData")
+load("bushClintonDT.RData")
 
 readFile <- function(title) {
   fileStuff <- readLines(title)
@@ -33,8 +38,6 @@ pruneWords <- function(dtm) {
   terms.df <- colapply_simple_triplet_matrix(dtm, function(tf) {sum(tf > 0)})
   dtm[,terms.df > 50]
 }
-
-stpwrds <- wordStem(scan(file="stopwords.txt", what=character())); 
 
 write.lda <- function(dtmToWrite, title="write_lda_output") {
   vocab <- dtmToWrite$dimnames$Terms
@@ -66,5 +69,36 @@ write.plda <- function(dtmToWrite, title="write_plda_output") {
   close(dtmFile)
 }
 
+topicTableGen <- function(topics) {
+  tables <- list()
+  tables <- lapply(seq(1, ncol(topics), by=15), function(i) {
+    tables[[length(tables)+1]] <- renderTable({
+      maxIndex <- min(i+14, ncol(topics))
+      df <- data.frame(topics[,i:maxIndex])
+      names(df) <- colnames(topics[,i:maxIndex])
+      return(df)
+    })
+  })
+  return(tables)
+}
 
-# extractDate <- 
+topicsOutput <- system(
+  paste("python topics.py output2/025.beta bushAndClinton_vocab.txt", 
+    100), intern=T)
+
+myTopics <- function(numWords) {
+  if (numWords > 100)
+    topicsOutput <- system(
+      paste("python topics.py output2/025.beta bushAndClinton_vocab.txt", 
+        numWords), intern=T)
+  printedOutput <- str_trim(topicsOutput)
+  printedOutput <- printedOutput[printedOutput != ""]
+  topicNames <- str_replace(printedOutput[str_detect(printedOutput, "\\d+")], "[t]", "T")
+  printedOutput <- printedOutput[!str_detect(printedOutput, "\\d+")]
+  testMat <- matrix(printedOutput, nrow=length(printedOutput)/length(topicNames),
+    ncol=length(topicNames), dimnames=list(c(), topicNames))
+  testMat[1:numWords,]
+}
+
+lda.40.gamma <- read.table("output2/025.gamma", sep=" ", quote="")
+colnames(lda.40.gamma) <- 1:ncol(lda.40.gamma)
